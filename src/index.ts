@@ -1,6 +1,7 @@
 export default {
   async fetch(request: Request, env: any) {
     const url = new URL(request.url);
+    console.log("Request received:", request.method, url.pathname);
 
     // GET /tasks
     if (url.pathname === "/tasks" && request.method === "GET") {
